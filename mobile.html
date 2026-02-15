@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chill Đà Nẵng</title>
+  <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <h1>CHILL ĐÀ NẴNG</h1>
+    <h1 class="owner">NGUYỄN VĂN BẢO DUY</h1>
+  </div>
+
+  <div class="player-box">
+
+    <div id="now">Chưa phát bài nào</div>
+
+    <div class="controls">
+      <button id="prev">⏮</button>
+      <button id="play">▶</button>
+      <button id="next">⏭</button>
+    </div>
+
+    <button id="open-modal" class="change-btn">
+      🎵 Chọn / Thêm Nhạc
+    </button>
+
+  </div>
+
+</div>
+
+<div class="modal hidden" id="modal">
+  <div class="modal-box">
+    <h3>Danh sách nhạc</h3>
+    <div id="song-list"></div>
+
+    <input type="text" id="custom-link" placeholder="Paste link YouTube...">
+    <button id="add-btn">Thêm & Phát</button>
+    <button id="close">Đóng</button>
+  </div>
+</div>
+
+<div id="yt"></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

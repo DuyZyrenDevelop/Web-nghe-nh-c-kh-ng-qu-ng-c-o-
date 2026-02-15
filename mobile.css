@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("bg.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+/* Lớp tối + blur giống PC */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  z-index: 0;
+}
+
+.app {
+  width: 92%;
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+
+.header h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.owner {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* ===== PLAYER BOX ===== */
+
+.player-box {
+  background: rgba(30,41,59,0.6);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+#now {
+  font-size: 13px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* ===== CONTROLS ===== */
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 22px;
+  backdrop-filter: blur(5px);
+  transition: 0.2s;
+}
+
+.controls button:active {
+  transform: scale(0.9);
+}
+
+/* ===== CHANGE BUTTON ===== */
+
+.change-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.change-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== MODAL ===== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-box {
+  width: 90%;
+  max-width: 350px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
